@@ -1,10 +1,16 @@
 <template>
   <div>
     <Header />
-    <div class="container">
-      <PokeDisplay :pokeID="pokeID"/>
-      <PokeList @pass-pokemon="updatePokeDetails"/>
-    </div>
+    <v-container class="container">
+      <v-row>
+        <v-col cols="3">
+          <PokeDisplay :pokeID="pokeID" />
+        </v-col>
+        <v-col cols="8">
+          <PokeList/>
+        </v-col>
+      </v-row>
+    </v-container>
     <Footer />
   </div>
 </template>
@@ -17,9 +23,9 @@ import Footer from "@/components/Footer.vue";
 export default {
   name: "index",
   data() {
-      return {
-          pokeID: 1
-      }
+    return {
+      pokeID: 1
+    };
   },
   components: {
     Header,
@@ -27,18 +33,12 @@ export default {
     PokeList,
     PokeDisplay
   },
-  methods: {
-      updatePokeDetails(id){
-          this.pokeID = id
-      }
-  }
 };
 </script>
 
 <style scoped>
-.container {
+/* .container {
   display: flex;
   justify-content: space-around;
-  background: white;
-}
+} */
 </style>

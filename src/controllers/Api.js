@@ -15,13 +15,21 @@ export default {
             .then(res => res.data.pokemon_entries)
     },
     getTypes() {
-        return Api.get('type/?limit=18')
-            .then(res => res.data.results)
-    },
+         return Api.get('type/?limit=18')
+         .then(res => res.data.results.map(type=>type.name))
+        },
+    getColors() {
+         return Api.get('pokemon-color/')
+         .then(res => res.data.results.map(type=>type.name))
+        },
     getType(id) {
-        console.log('kdada')
         return Api.get(`type/${id}`)
             .then(res => res.data.pokemon)
-    }
+    },
+    getColor(id) {
+        return Api.get(`pokemon-color/${id}`)
+            .then(res => res.data.pokemon_species)
+    },
+
 }
 

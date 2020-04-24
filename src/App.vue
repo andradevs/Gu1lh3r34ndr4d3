@@ -5,8 +5,8 @@
 </template>
 
 <script>
+import "pokemon-font/css/pokemon-font.css";
 import Index from './views/index.vue'
-
 export default {
   name: 'App',
   components: {
@@ -16,16 +16,14 @@ export default {
 </script>
 
 <style>
-*{
-  box-sizing: content-box;
-  margin:0;
-}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
-  margin-top: 60px;
+  background: #222224;
+  box-sizing: border-box;
 }
 </style>
