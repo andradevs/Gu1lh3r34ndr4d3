@@ -3,6 +3,8 @@
 ## Descrição
 Projeto realizado atraves de consultas na [PokeAPI](https://pokeapi.co/). Todas as informações mostradas foram inseridas atraves da API. Este projeto tem como principal ferramenta para o front-end o framework [VueJs](https://vuejs.org/) e suas bibliotecas([Vuex](https://vuex.vuejs.org/), [Vuetify](https://vuetifyjs.com/en/) ).
 
+Os dados de Peso e Altura foram convertidos para baterem com as informações segundo a Bullbapedia, mesma fonte de dados em que a API utilizou.
+
 ## Faça o clone do repositorio e instale as dependencias com:
 ```
 yarn install
