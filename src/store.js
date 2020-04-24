@@ -5,6 +5,7 @@ import Api from './controllers/Api'
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
+    //States da Aplicação
     state:{
         pokemon:{},
         loading:false

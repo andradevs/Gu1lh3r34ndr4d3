@@ -1,4 +1,6 @@
+//Classe Pokemon 
 class Pokemon {
+    //recebe como parametro a resposta da API
     constructor(poke){
          
         this.id = poke.id;
@@ -8,7 +10,7 @@ class Pokemon {
         this.height = this._Convert(poke.height);
         this.weight = this._Convert(poke.weight);
     }
-
+    //Pega os tipos do pokemon 
     _getTypes(types){
         if(types.length > 0){
             types = types.map(type =>{
@@ -18,7 +20,7 @@ class Pokemon {
         }
         return types
     }
-
+    //Converte as unidade de medida e Altura para as reais
     _Convert(unit){
         return unit / 10
     }
